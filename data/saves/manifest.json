@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "activeSaveId": "default",
+  "saves": [
+    {
+      "id": "default",
+      "title": "FOR THE FUTURE",
+      "sceneFile": "default.scene.json",
+      "createdAt": "2026-08-25T10:06:06.996Z",
+      "updatedAt": "2026-08-25T10:16:00.209Z",
+      "password": {
+        "salt": "8155bfed41b092cfd149033bacccc886",
+        "hash": "c187bb2f6025bbec29445bf4f114435342b2a2c695bad17ba5ec9000f09ed7aa"
+      }
+    }
+  ]
+}

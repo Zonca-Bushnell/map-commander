@@ -1,0 +1,1032 @@
+{
+  "version": 2,
+  "savedAt": "2026-08-25T09:48:52.201Z",
+  "objects": [
+    {
+      "id": "long_office_bar_018",
+      "name": "宿舍区",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        -290,
+        0,
+        40
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        28,
+        482,
+        53
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "long_office_bar",
+        "count": 6,
+        "width": 28,
+        "depth": 72,
+        "height": 58,
+        "spacing": 10,
+        "heightVariance": 0.18,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "mega_hq_tower_019",
+      "name": "杰美总部",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        40,
+        0,
+        -920
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1.3733303037513427
+      ],
+      "dimensions": [
+        186,
+        151,
+        747
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "mega_hq_tower",
+        "count": 1,
+        "width": 128,
+        "depth": 116,
+        "height": 450,
+        "spacing": 28,
+        "heightVariance": 0,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "dispatch_compound_020",
+      "name": "食堂",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        -380,
+        0,
+        231
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        106,
+        77,
+        86
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "dispatch_compound",
+        "count": 5,
+        "width": 44,
+        "depth": 44,
+        "height": 82,
+        "spacing": 14,
+        "heightVariance": 0.25,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "dispatch_compound_021",
+      "name": "食堂",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        -380,
+        0,
+        121
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        106,
+        77,
+        86
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "dispatch_compound",
+        "count": 5,
+        "width": 44,
+        "depth": 44,
+        "height": 82,
+        "spacing": 14,
+        "heightVariance": 0.25,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "research_lab_023",
+      "name": "杰美公司研究所",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        -210,
+        0,
+        -900
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        246,
+        185,
+        113
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "research_lab",
+        "count": 4,
+        "width": 120,
+        "depth": 104,
+        "height": 96,
+        "spacing": 22,
+        "heightVariance": 0.22,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "port_026",
+      "name": "港口",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        -540,
+        0,
+        -150
+      ],
+      "rotation": [
+        0,
+        4.71238898038469,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        152,
+        390,
+        62
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "port",
+        "count": 10,
+        "width": 118,
+        "depth": 72,
+        "height": 58,
+        "spacing": 14,
+        "heightVariance": 0.15,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "long_office_bar_028",
+      "name": "宿舍区",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        -240,
+        0,
+        40
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        28,
+        482,
+        53
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "long_office_bar",
+        "count": 6,
+        "width": 28,
+        "depth": 72,
+        "height": 58,
+        "spacing": 10,
+        "heightVariance": 0.18,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "library_029",
+      "name": "州立图书馆",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        270,
+        0,
+        -80
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        154,
+        88,
+        58
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "library",
+        "count": 3,
+        "width": 70,
+        "depth": 58,
+        "height": 54,
+        "spacing": 12,
+        "heightVariance": 0.12,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "podium_complex_031",
+      "name": "podium_complex_031",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        270,
+        0,
+        -180
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        135,
+        72,
+        91
+      ],
+      "showNameplate": false,
+      "generator": {
+        "type": "podium_complex",
+        "count": 5,
+        "width": 48,
+        "depth": 40,
+        "height": 92,
+        "spacing": 18,
+        "heightVariance": 0.28,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "podium_complex_032",
+      "name": "州立图书馆",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        418.7194249461501,
+        1.4803330796769387,
+        -137.18276435781024
+      ],
+      "rotation": [
+        0,
+        1.5707963267948966,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        72,
+        135,
+        91
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "podium_complex",
+        "count": 5,
+        "width": 48,
+        "depth": 40,
+        "height": 92,
+        "spacing": 18,
+        "heightVariance": 0.28,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "residential_district_033",
+      "name": "residential_district_033",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        310,
+        0,
+        180
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        207,
+        175,
+        92
+      ],
+      "showNameplate": false,
+      "generator": {
+        "type": "residential_district",
+        "count": 12,
+        "width": 38,
+        "depth": 46,
+        "height": 88,
+        "spacing": 18,
+        "heightVariance": 0.28,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "residential_district_034",
+      "name": "居民区",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        540,
+        0,
+        180
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        207,
+        175,
+        92
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "residential_district",
+        "count": 12,
+        "width": 38,
+        "depth": 46,
+        "height": 88,
+        "spacing": 18,
+        "heightVariance": 0.28,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "freight_depot_037",
+      "name": "托运部",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        -510,
+        0,
+        -980
+      ],
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        285,
+        125,
+        58
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "freight_depot",
+        "count": 12,
+        "width": 92,
+        "depth": 58,
+        "height": 52,
+        "spacing": 12,
+        "heightVariance": 0.1,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "freight_depot_037_copy",
+      "name": "托运部",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        -510,
+        0,
+        -860
+      ],
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        285,
+        125,
+        58
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "freight_depot",
+        "count": 12,
+        "width": 92,
+        "depth": 58,
+        "height": 52,
+        "spacing": 12,
+        "heightVariance": 0.1,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "nasa_research_038",
+      "name": "NASA总部",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        1019.4806964528709,
+        0,
+        -910
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        322,
+        215,
+        115
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "nasa_research",
+        "count": 5,
+        "width": 142,
+        "depth": 118,
+        "height": 108,
+        "spacing": 24,
+        "heightVariance": 0.18,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "warehouse_041",
+      "name": "仓库",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        -540,
+        0,
+        -710
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        245,
+        116,
+        48
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "warehouse",
+        "count": 5,
+        "width": 104,
+        "depth": 70,
+        "height": 42,
+        "spacing": 18,
+        "heightVariance": 0.16,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "warehouse_042",
+      "name": "warehouse_042",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        -550,
+        0,
+        -1130
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        245,
+        116,
+        48
+      ],
+      "showNameplate": false,
+      "generator": {
+        "type": "warehouse",
+        "count": 5,
+        "width": 104,
+        "depth": 70,
+        "height": 42,
+        "spacing": 18,
+        "heightVariance": 0.16,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "hospital_043",
+      "name": "医院",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        1020,
+        0,
+        -210
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        288,
+        174,
+        99
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "hospital",
+        "count": 4,
+        "width": 126,
+        "depth": 92,
+        "height": 72,
+        "spacing": 18,
+        "heightVariance": 0.12,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "dense_city_block_045",
+      "name": "dense_city_block_045",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        636.0238129046189,
+        0,
+        -12.558687223665956
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        146,
+        149,
+        46
+      ],
+      "showNameplate": false,
+      "generator": {
+        "type": "dense_city_block",
+        "count": 18,
+        "width": 22,
+        "depth": 30,
+        "height": 38,
+        "spacing": 8,
+        "heightVariance": 0.35,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "dense_city_block_046",
+      "name": "dense_city_block_046",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        640,
+        0,
+        -170
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        146,
+        149,
+        46
+      ],
+      "showNameplate": false,
+      "generator": {
+        "type": "dense_city_block",
+        "count": 18,
+        "width": 22,
+        "depth": 30,
+        "height": 38,
+        "spacing": 8,
+        "heightVariance": 0.35,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "rocket_launch_site_047",
+      "name": "发射井",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        1040,
+        0,
+        -1850
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        281,
+        264,
+        222
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "rocket_launch_site",
+        "count": 1,
+        "width": 170,
+        "depth": 170,
+        "height": 220,
+        "spacing": 18,
+        "heightVariance": 0,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "podium_complex_048",
+      "name": "podium_complex_048",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        1090,
+        0,
+        -30
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        135,
+        72,
+        91
+      ],
+      "showNameplate": false,
+      "generator": {
+        "type": "podium_complex",
+        "count": 5,
+        "width": 48,
+        "depth": 40,
+        "height": 92,
+        "spacing": 18,
+        "heightVariance": 0.28,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "research_lab_049",
+      "name": "NASA研究所",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        1330,
+        0,
+        -890
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        246,
+        185,
+        113
+      ],
+      "showNameplate": true,
+      "generator": {
+        "type": "research_lab",
+        "count": 4,
+        "width": 120,
+        "depth": 104,
+        "height": 96,
+        "spacing": 22,
+        "heightVariance": 0.22,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "twin_towers_050",
+      "name": "twin_towers_050",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        610,
+        0,
+        -320
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        164,
+        60,
+        158
+      ],
+      "showNameplate": false,
+      "generator": {
+        "type": "twin_towers",
+        "count": 2,
+        "width": 44,
+        "depth": 44,
+        "height": 150,
+        "spacing": 34,
+        "heightVariance": 0.08,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "mission_marker_051",
+      "name": "mission_marker_051",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        970,
+        0,
+        -50
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        37,
+        37,
+        50
+      ],
+      "showNameplate": false,
+      "generator": {
+        "type": "mission_marker",
+        "count": 1,
+        "width": 34,
+        "depth": 34,
+        "height": 42,
+        "spacing": 0,
+        "heightVariance": 0,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "long_office_bar_052",
+      "name": "long_office_bar_052",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        1200,
+        0,
+        -30
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        28,
+        482,
+        53
+      ],
+      "showNameplate": false,
+      "generator": {
+        "type": "long_office_bar",
+        "count": 6,
+        "width": 28,
+        "depth": 72,
+        "height": 58,
+        "spacing": 10,
+        "heightVariance": 0.18,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    },
+    {
+      "id": "warehouse_053",
+      "name": "warehouse_053",
+      "kind": "generated_building",
+      "color": "#25c9be",
+      "position": [
+        1320,
+        0,
+        -680
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "dimensions": [
+        245,
+        116,
+        48
+      ],
+      "showNameplate": false,
+      "generator": {
+        "type": "warehouse",
+        "count": 5,
+        "width": 104,
+        "depth": 70,
+        "height": 42,
+        "spacing": 18,
+        "heightVariance": 0.16,
+        "seed": "dispatch-01"
+      },
+      "interior": null
+    }
+  ]
+}

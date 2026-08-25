@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>Dispatch Map Editor</title>
+  </head>
+  <body>
+    <div id="app">
+      <aside class="toolbar">
+        <div class="brand">
+          <span>3DGUI</span>
+          <strong>Dispatch Map</strong>
+        </div>
+
+        <section>
+          <h2>生成建筑</h2>
+          <label>
+            类型
+            <select id="create-type">
+              <option value="office_block">写字楼体块</option>
+              <option value="dense_city_block">密集街区</option>
+              <option value="long_office_bar">长条楼组</option>
+              <option value="twin_towers">双塔</option>
+              <option value="tower_cluster">塔楼群</option>
+              <option value="podium_complex">裙楼综合体</option>
+              <option value="dispatch_compound">派遣建筑组</option>
+              <option value="circular_facility">圆形设施</option>
+              <option value="ring_hq">环形总部</option>
+              <option value="mission_marker">任务点</option>
+              <option value="library">图书馆</option>
+              <option value="mega_hq_tower">超高总部大楼</option>
+              <option value="rocket_launch_site">火箭发射区</option>
+              <option value="port">港口</option>
+              <option value="freight_depot">托运部门</option>
+              <option value="warehouse">仓库</option>
+              <option value="research_lab">研究所</option>
+              <option value="hospital">大型医院</option>
+              <option value="nasa_research">NASA研究所</option>
+              <option value="residential_district">居民区</option>
+            </select>
+          </label>
+          <div class="grid-fields">
+            <label>数量<input id="create-count" type="number" min="1" max="24" step="1" value="5" /></label>
+            <label>宽<input id="create-width" type="number" min="8" max="180" step="2" value="42" /></label>
+            <label>深<input id="create-depth" type="number" min="8" max="180" step="2" value="42" /></label>
+          </div>
+          <div class="grid-fields">
+            <label>高度<input id="create-height" type="number" min="4" max="520" step="2" value="96" /></label>
+            <label>间距<input id="create-spacing" type="number" min="0" max="120" step="2" value="18" /></label>
+            <label>随机<input id="create-variance" type="number" min="0" max="1" step="0.05" value="0.25" /></label>
+          </div>
+          <label>
+            种子
+            <input id="create-seed" type="text" value="dispatch-01" />
+          </label>
+          <label>
+            颜色
+            <input id="create-color" type="color" value="#25c9be" />
+          </label>
+          <button data-action="place-generated">生成并放置</button>
+        </section>
+
+        <section>
+          <h2>对象列表</h2>
+          <div id="object-list" class="object-list"></div>
+        </section>
+
+        <section>
+          <h2>变换</h2>
+          <div class="segmented">
+            <button data-mode="translate" class="active">W 移动</button>
+            <button data-mode="rotate">E 旋转</button>
+            <button data-mode="scale">R 缩放</button>
+          </div>
+          <label class="check-row">
+            <input id="snap-enabled" type="checkbox" checked />
+            网格吸附
+          </label>
+          <label>
+            吸附单位
+            <input id="snap-size" type="number" min="1" max="100" step="1" value="10" />
+          </label>
+        </section>
+
+        <section>
+          <h2>镜头</h2>
+          <button data-camera="dispatch">Dispatch</button>
+          <button data-camera="topdown">Topdown</button>
+          <button data-camera="lowOblique">Low Oblique</button>
+          <button data-camera-mode="orbit">旋转模式</button>
+          <button data-camera-mode="pan">平移模式</button>
+        </section>
+
+        <section>
+          <h2>保存/导出</h2>
+          <button data-action="save">保存 JSON</button>
+          <button data-action="load">读取 JSON</button>
+          <button data-action="undo">撤回 Ctrl+Z</button>
+          <button data-action="redo">反撤回 Ctrl+Y</button>
+          <button data-action="clear-all">一键清空</button>
+          <button data-action="screenshot">导出 PNG</button>
+          <button data-action="gltf">导出 glTF</button>
+          <button data-action="viewer">导出观看网页</button>
+        </section>
+      </aside>
+
+      <main id="viewport">
+        <canvas id="scene"></canvas>
+        <div class="hud">
+          <div>SUPERHUMAN DISPATCH CENTER</div>
+          <span id="status">初始化中...</span>
+        </div>
+      </main>
+
+      <aside class="inspector">
+        <h2>属性</h2>
+        <label>
+          名称
+          <input id="prop-name" type="text" />
+        </label>
+        <label>
+          类型
+          <input id="prop-kind" type="text" disabled />
+        </label>
+        <div class="grid-fields">
+          <label>X<input id="prop-x" type="number" step="1" /></label>
+          <label>Y<input id="prop-y" type="number" step="1" /></label>
+          <label>Z<input id="prop-z" type="number" step="1" /></label>
+        </div>
+        <div class="grid-fields">
+          <label>旋转<input id="prop-rot" type="number" step="1" /></label>
+          <label>缩放<input id="prop-scale" type="number" step="0.05" min="0.05" /></label>
+          <label>颜色<input id="prop-color" type="color" /></label>
+        </div>
+
+        <h2>生成参数</h2>
+        <label>
+          类型
+          <select id="prop-gen-type">
+            <option value="office_block">写字楼体块</option>
+            <option value="dense_city_block">密集街区</option>
+            <option value="long_office_bar">长条楼组</option>
+            <option value="twin_towers">双塔</option>
+            <option value="tower_cluster">塔楼群</option>
+            <option value="podium_complex">裙楼综合体</option>
+            <option value="dispatch_compound">派遣建筑组</option>
+            <option value="circular_facility">圆形设施</option>
+            <option value="ring_hq">环形总部</option>
+            <option value="mission_marker">任务点</option>
+            <option value="library">图书馆</option>
+            <option value="mega_hq_tower">超高总部大楼</option>
+            <option value="rocket_launch_site">火箭发射区</option>
+            <option value="port">港口</option>
+            <option value="freight_depot">托运部门</option>
+            <option value="warehouse">仓库</option>
+            <option value="research_lab">研究所</option>
+            <option value="hospital">大型医院</option>
+            <option value="nasa_research">NASA研究所</option>
+            <option value="residential_district">居民区</option>
+          </select>
+        </label>
+        <div class="grid-fields">
+          <label>数量<input id="prop-gen-count" type="number" min="1" max="24" step="1" /></label>
+          <label>宽<input id="prop-gen-width" type="number" min="8" max="180" step="2" /></label>
+          <label>深<input id="prop-gen-depth" type="number" min="8" max="180" step="2" /></label>
+        </div>
+        <div class="grid-fields">
+          <label>高度<input id="prop-gen-height" type="number" min="4" max="520" step="2" /></label>
+          <label>间距<input id="prop-gen-spacing" type="number" min="0" max="120" step="2" /></label>
+          <label>随机<input id="prop-gen-variance" type="number" min="0" max="1" step="0.05" /></label>
+        </div>
+        <label>
+          种子
+          <input id="prop-gen-seed" type="text" />
+        </label>
+
+        <div class="button-grid">
+          <button id="apply-props">应用属性</button>
+          <button id="regenerate-object">重新生成</button>
+          <button id="copy-object">复制选中</button>
+          <button id="reset-rotation">重置旋转</button>
+          <button id="stick-ground">贴地</button>
+          <button id="delete-object" class="danger">删除</button>
+        </div>
+        <p class="hint">
+          左键点住建筑本体即可拖动。W/E/R 可切换精确移动、旋转、缩放。按住 Shift 临时关闭网格吸附，Esc 取消放置。
+        </p>
+      </aside>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
