@@ -4,7 +4,7 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import sceneData from "../data/saves/default.scene.json";
 import manifest from "../data/saves/manifest.json";
 
-const PASSWORD_HASH = "9d1ed0ca3a144c0e3d83a4f9326a49346ae73447f1340ab3a63d5d7ae5189f19";
+const PASSWORD_HASH = "f174423444907a20b05145600dd8b960b743c75023548870468dd2075f4dd16a";
 
 const canvas = document.querySelector("#viewer");
 const statusEl = document.querySelector("#status");
