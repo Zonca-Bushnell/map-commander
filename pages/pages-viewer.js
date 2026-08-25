@@ -27,6 +27,7 @@ scene.add(world, labels);
 
 const recordsByObject = new Map();
 let labelsVisible = true;
+let activeSceneData = sceneData;
 
 const cameras = {
   dispatch: { position: [0, -720, 760], target: [20, 0, 30] },
@@ -52,6 +53,7 @@ function createPasswordGate() {
       <strong>${manifest.saves?.[0]?.title || "FOR THE FUTURE"}</strong>
       <label>Viewer password<input id="viewer-password" type="password" autocomplete="current-password" /></label>
       <button id="unlock-viewer">Open Viewer</button>
+      <button id="open-test-viewer" type="button">Open Test Archive</button>
       <p id="password-status">Enter the archive viewer password.</p>
     </div>
   `;
@@ -64,13 +66,81 @@ function createPasswordGate() {
       return;
     }
     gate.remove();
-    buildWorld();
+    buildWorld(sceneData, "FOR THE FUTURE");
   };
   gate.querySelector("#unlock-viewer").addEventListener("click", unlock);
+  gate.querySelector("#open-test-viewer").addEventListener("click", () => {
+    gate.remove();
+    buildWorld(createTestSceneData(), "TEST ARCHIVE");
+  });
   input.addEventListener("keydown", (event) => {
     if (event.key === "Enter") unlock();
   });
   input.focus();
+}
+
+function createTestSceneData() {
+  const types = [
+    "office_block",
+    "tower_cluster",
+    "podium_complex",
+    "hospital",
+    "nasa_research",
+    "warehouse",
+    "freight_depot",
+    "port",
+    "residential_district",
+    "rocket_launch_site",
+    "mega_hq_tower"
+  ];
+  const colors = ["#25c9be", "#34e6d8", "#1aa8ff", "#58f3c0", "#71d8ff"];
+  const defaults = {
+    office_block: [5, 80, 70, 90],
+    tower_cluster: [8, 110, 100, 130],
+    podium_complex: [5, 130, 100, 95],
+    hospital: [4, 160, 120, 80],
+    nasa_research: [5, 170, 140, 120],
+    warehouse: [5, 150, 100, 45],
+    freight_depot: [12, 160, 120, 55],
+    port: [10, 180, 120, 60],
+    residential_district: [12, 150, 140, 95],
+    rocket_launch_site: [1, 180, 180, 220],
+    mega_hq_tower: [1, 150, 140, 460]
+  };
+  const objects = [];
+  for (let index = 0; index < 18; index += 1) {
+    const type = types[index % types.length];
+    const [count, width, depth, height] = defaults[type];
+    const angle = index * 0.68;
+    const ring = index % 2 ? 285 : 165;
+    objects.push({
+      id: `pages_test_${index + 1}`,
+      name: `TEST ${index + 1}`,
+      kind: "generated_building",
+      color: colors[index % colors.length],
+      position: [
+        Math.round(Math.cos(angle) * ring + ((index % 3) - 1) * 24),
+        0,
+        Math.round(Math.sin(angle) * ring + ((index % 4) - 1.5) * 22)
+      ],
+      rotation: [0, (index % 7) * 0.12, 0],
+      scale: [1, 1, 1],
+      dimensions: [width, depth, height],
+      showNameplate: index % 3 === 0,
+      generator: {
+        type,
+        count,
+        width,
+        depth,
+        height,
+        spacing: 14,
+        heightVariance: 0.24,
+        seed: `pages-test-${index}`
+      },
+      interior: null
+    });
+  }
+  return { version: 2, savedAt: new Date().toISOString(), testOnly: true, objects };
 }
 
 function makeMaterial(color, opacity = 0.78) {
@@ -198,14 +268,31 @@ function addBaseMap() {
   [-240, -30, 190, 390].forEach((x) => addBox(world, x, 0, 8, 590, 2.8, "#06151c"));
 }
 
-function buildWorld() {
+function clearGroup(group) {
+  group.children.slice().forEach((child) => {
+    group.remove(child);
+    child.traverse?.((item) => {
+      item.geometry?.dispose?.();
+      if (Array.isArray(item.material)) item.material.forEach((material) => material.dispose?.());
+      else item.material?.dispose?.();
+    });
+  });
+}
+
+function buildWorld(nextSceneData = sceneData, title = "FOR THE FUTURE") {
+  activeSceneData = nextSceneData;
+  recordsByObject.clear();
+  clearGroup(world);
+  clearGroup(labels);
+  document.querySelector(".interior-readout")?.remove();
+  document.querySelector(".hud strong").textContent = title;
   addBaseMap();
-  (sceneData.objects || []).forEach((record) => {
+  (activeSceneData.objects || []).forEach((record) => {
     const object = createRecordObject(record);
     world.add(object);
     addLabel(record);
   });
-  setStatus(`Loaded ${(sceneData.objects || []).length} map objects`);
+  setStatus(`Loaded ${(activeSceneData.objects || []).length} map objects`);
 }
 
 function showInterior(record) {
@@ -275,6 +362,9 @@ document.querySelectorAll("[data-mode]").forEach((button) => {
 document.querySelector("[data-action='labels']").addEventListener("click", () => {
   labelsVisible = !labelsVisible;
   labels.visible = labelsVisible;
+});
+document.querySelector("[data-action='test']").addEventListener("click", () => {
+  buildWorld(createTestSceneData(), "TEST ARCHIVE");
 });
 canvas.addEventListener("click", onClick);
 window.addEventListener("resize", resize);
