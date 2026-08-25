@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map Commander Viewer</title>
+  </head>
+  <body>
+    <canvas id="viewer"></canvas>
+    <div class="hud">
+      <strong>FOR THE FUTURE</strong>
+      <span id="status">Loading viewer...</span>
+    </div>
+    <div class="controls">
+      <button data-camera="dispatch">Dispatch</button>
+      <button data-camera="topdown">Topdown</button>
+      <button data-camera="low">Low</button>
+      <button data-mode="orbit">Rotate</button>
+      <button data-mode="pan">Pan</button>
+      <button data-action="labels">Labels</button>
+    </div>
+    <script type="module" src="./pages-viewer.js"></script>
+  </body>
+</html>

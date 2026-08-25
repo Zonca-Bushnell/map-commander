@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 5177",
     "build": "vite build",
+    "build:pages": "vite build --config vite.pages.config.js",
     "preview": "vite preview --host 127.0.0.1 --port 4177"
   },
   "dependencies": {

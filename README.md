@@ -76,6 +76,21 @@ Then start the editor from the same terminal.
 - `start-editor.cmd`: local editor, only this machine can access it.
 - `start-editor-lan.cmd`: exposes the editor on the local network. Use only on trusted LANs.
 - `package-viewer.cmd`: packages the last exported read-only viewer into `data/share`.
+- `pnpm build:pages`: builds the GitHub Pages read-only viewer.
+
+## GitHub Pages viewer
+
+The repository includes a static Pages viewer in `pages/`.
+
+After GitHub Pages is enabled with GitHub Actions as the source, the viewer URL is:
+
+```text
+https://zonca-bushnell.github.io/map-commander/
+```
+
+The viewer reads the included `FOR THE FUTURE` archive and asks for the viewer password `JAMES`.
+
+If Pages cannot publish from a private repository on your GitHub plan, change the repository visibility to Public or deploy the generated `pages-dist/` output to another static hosting provider.
 
 ## Notes
 
