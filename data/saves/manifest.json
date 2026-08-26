@@ -9,8 +9,8 @@
       "createdAt": "2026-08-25T10:06:06.996Z",
       "updatedAt": "2026-08-25T10:16:00.209Z",
       "password": {
-        "salt": "8155bfed41b092cfd149033bacccc886",
-        "hash": "c187bb2f6025bbec29445bf4f114435342b2a2c695bad17ba5ec9000f09ed7aa"
+        "salt": "1adc5610d4d35f216fd5e52dfbe140fd",
+        "hash": "b66658189176e3ec3b94b5c6fd5396a6acddae8041735a5f9cce23477c51d844"
       }
     }
   ]

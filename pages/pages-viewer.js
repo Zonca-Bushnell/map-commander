@@ -5,7 +5,7 @@ import sceneData from "../data/saves/default.scene.json";
 import manifest from "../data/saves/manifest.json";
 import { createBuildingBlock, generatorDefaults, typeLabels } from "../src/blocks/blockLibrary.js";
 
-const PASSWORD_HASH = "f174423444907a20b05145600dd8b960b743c75023548870468dd2075f4dd16a";
+const PASSWORD_HASH = "51c39d4d0c3884910a01ea0aeb4918100e0f13c7051af096acf10168c171e7da";
 
 const canvas = document.querySelector("#viewer");
 const statusEl = document.querySelector("#status");

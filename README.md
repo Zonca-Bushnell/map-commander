@@ -37,7 +37,7 @@ http://127.0.0.1:5177/
 The editor starts at an archive picker. The included archive is:
 
 - Name: `FOR THE FUTURE`
-- Password: `JAMES`
+- Password: `PLUTO_THE_ALTERATION`
 
 ## Data
 
@@ -88,7 +88,7 @@ After GitHub Pages is enabled with GitHub Actions as the source, the viewer URL 
 https://zonca-bushnell.github.io/map-commander/
 ```
 
-The viewer reads the included `FOR THE FUTURE` archive and asks for the viewer password `JAMES`.
+The viewer reads the included `FOR THE FUTURE` archive and asks for the viewer password `PLUTO_THE_ALTERATION`.
 
 If Pages cannot publish from a private repository on your GitHub plan, change the repository visibility to Public or deploy the generated `pages-dist/` output to another static hosting provider.
 
